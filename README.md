@@ -8,5 +8,6 @@ Python library to scrape images for the given keyword and returns the required n
 
 # Setup
 1. clone the repo
-2. `pip install -r requirements.pip`
-3. run the file `test.py` with proper key and count (currently we have *'doctor starnge'* and *5*)
+2. install pipenv
+3. then run `pipenv install` inside the repository
+3. run `pipenv run python test.py` with proper key and count (currently we have *'doctor strange'* and *5*)
