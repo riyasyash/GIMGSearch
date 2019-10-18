@@ -1,4 +1,4 @@
-from image_search import IMGSearch
+from niffler import Niffler
 
-image_urls = IMGSearch().search('doctor strange', 5)
+image_urls = Niffler('doctor strange', 5).sniff('google')
 print(image_urls)
