@@ -14,7 +14,7 @@ class Niffler():
         # search_url = google_image_search_url.format(search_key=self.keyword)
         search_url = self.almanac.get_image_search_url_and_params(handle_name, self.keyword)
         page = requests.get(search_url).content
-        soup = BeautifulSoup(page, 'html.parser').findall('div', {"id": "search"}, limit=1)[0]
+        soup = BeautifulSoup(page, 'html.parser').find('div', {"id": "search"})
         image_tags = soup.find_all('img', limit=self.count)
         image_urls = self.get_urls_from_parent(image_tags)
         # image_urls = [image_tag.get('src') for image_tag in image_tags]
