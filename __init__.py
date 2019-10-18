@@ -1,4 +1,4 @@
-from image_search import IMGSearch
+from image_search import Niffler
 
 
 class GIMGSearch():
@@ -18,9 +18,9 @@ class GIMGSearch():
         :return: image urls matching the submitted key_word
         '''
         if key_word_to_be_searched is None:
-            raise Exception('key word to search is not submitted')
+            raise Exception('key word to sniff is not submitted')
         self.key_word_to_be_searched = key_word_to_be_searched
         if number_of_images_to_be_returned:
             self.number_of_images_to_be_returned = number_of_images_to_be_returned
 
-        return IMGSearch().search(self.key_word_to_be_searched,self.number_of_images_to_be_returned)
+        return Niffler().sniff(self.key_word_to_be_searched, self.number_of_images_to_be_returned)
